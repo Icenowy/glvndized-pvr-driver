@@ -1,0 +1,13 @@
+digraph mesa_callgraph {
+	margin=0;
+	rankdir="LR";
+	node [shape=rectangle];
+	entrypoint [label="Entrypoint libraries"];
+	loader [label="DRI loader"];
+	driimpl [label="DRI implementation"];
+
+	pvrdrishim [label="PVR DRI Shim"];
+	pvrblob [label="PVR closed driver", style=filled, fillcolor=lightpink];
+	entrypoint -> loader -> driimpl;
+	loader -> pvrdrishim -> pvrblob;
+}

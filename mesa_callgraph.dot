@@ -1,0 +1,9 @@
+digraph mesa_callgraph {
+	margin=0;
+	rankdir="LR";
+	node [shape=rectangle];
+	entrypoint [label="Entrypoint libraries"];
+	loader [label="DRI loader"];
+	driimpl [label="DRI implementation"];
+	entrypoint -> loader -> driimpl;
+}
