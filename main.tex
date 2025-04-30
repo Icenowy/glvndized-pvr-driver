@@ -229,4 +229,26 @@
 	\end{itemize}
 \end{frame}
 
+\section{Sidenotes}
+
+\begin{frame}
+	\frametitle{Sidenote for Zink adaption}
+	\begin{itemize}
+		\item Zink does not work with too old Imagination closed drivers (I tested with a driver built with DDK 1.17), which seems to be unfixable.
+		\item StarFive delivers the Vulkan drivers for JH7110 weirdly: the Vulkan driver contained in soft\_3rdpart does not support displaying anything at all (come w/o VK\_KHR\_swapchain extension), the drivers that support displaying is hidden in their ``Debian'' repository, and they made two variants (one variant for X w/o Wayland support, another for Wayland w/o X support).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{My own practice presented as reference}
+	\begin{block}{Build recipes for my test packages on AOSC OS}
+		\url{https://github.com/Icenowy/aosc-os-pvr} \\
+		Note that the DDK1.19 part here is already retired because of AOSC OS upstream inclusion.
+	\end{block}
+	\begin{block}{Mesa patches applied to AOSC OS for Rogue Zink}
+		\url{https://github.com/AOSC-Dev/aosc-os-abbs/tree/stable/runtime-display/mesa/autobuild/patches} \\
+		Check the patches with zink in their name.
+	\end{block}
+\end{frame}
+
 \end{document}
