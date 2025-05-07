@@ -59,7 +59,7 @@
 	\frametitle{What does Imagination do on Mesa?}
 	Mesa itself is a multi-layer project, consists of a DRI implementation and a DRI loader. \\
 	It implements EGL/GLX entrypoint libraries (in modern distros with GLVND, \texttt{lib\{EGL,GLX\}\_mesa.so}) via the DRI loader loading the real DRI implemenation (which does buffer management and GL(ES)). \\
-	In additionit implements GBM (integrated into \texttt{libgbm.so}) via the DRI loader.
+	In addition, it implements GBM (integrated into \texttt{libgbm.so}) via the DRI loader.
 	\begin{block}{Call graph}
 		\includegraphics[scale=0.53,keepaspectratio=true]{mesa_callgraph.pdf}
 	\end{block}
